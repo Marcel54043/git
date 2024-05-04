@@ -19,6 +19,11 @@ elif [[ "$1" == "--logs" ]]; then
     done
 
     echo "$liczba_plikow plików zostało utworzonych."
+elif [[ "$1" == "--help" || "$1" == "-h" ]]; then
+    echo "Użycie: $0 [--date | --logs]"
+    echo "Opcje:"
+    echo "  --date       Wyświetla dzisiejszą datę."
+    echo "  --logs <n>   Tworzy n plików dziennika z datą i nazwą skryptu."
 else
     echo "Użycie: $0 [--date | --logs]"
     echo "Opcje:"
