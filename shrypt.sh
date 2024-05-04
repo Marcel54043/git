@@ -22,11 +22,21 @@ elif [[ "$1" == "--logs" || "$1" == "-l" ]]; then
 elif [[ "$1" == "--help" || "$1" == "-h" ]]; then
     echo "Użycie: $0 [--date | --logs]"
     echo "Opcje:"
-    echo "  --date       Wyświetla dzisiejszą datę."
-    echo "  --logs <n>   Tworzy n plików dziennika z datą i nazwą skryptu."
+    echo "  --date  -d    Wyświetla dzisiejszą datę."
+    echo "  --logs <n>  -l   Tworzy n plików dziennika z datą i nazwą skryptu."
+elif [[ "$1" == "--init" ]]; then
+    git clone <https://github.com/Marcel54043/git.git>
+
+    repo_path=$(pwd)
+
+    echo "export PATH=\"\$PATH:$repo_path\"" >> ~/.bashrc
+    source ~/.bashrc
+
+    echo "Repozytorium zostało pomyślnie zainicjowane."
 else
-    echo "Użycie: $0 [--date | --logs]"
+    echo "Użycie: $0 [--date | --logs | --init]"
     echo "Opcje:"
-    echo "  --date       Wyświetla dzisiejszą datę."
-    echo "  --logs <n>   Tworzy n plików dziennika z datą i nazwą skryptu."
+    echo "  --date   -d    Wyświetla dzisiejszą datę."
+    echo "  --logs <n>  -l  Tworzy n plików dziennika z datą i nazwą skryptu."
+    echo "  --init   Inicjuje środowisko pracy, klonując repozytorium do bieżącego katalogu i ustawiając ścieżkę w zmiennej PATH."
 fi
