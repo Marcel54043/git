@@ -2,7 +2,7 @@
 
 dzisiaj=$(date +"%Y-%m-%d")
 
-if [[ "$1" == "--date" ]]; then
+if [[ "$1" == "--date" || "$1" == "-d" ]]; then
     echo "Dzisiaj jest: $dzisiaj"
 elif [[ "$1" == "--logs" || "$1" == "-l" ]]; then
     if [[ $# -ne 2 || ! $2 =~ ^[0-9]+$ ]]; then
