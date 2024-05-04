@@ -4,7 +4,7 @@ dzisiaj=$(date +"%Y-%m-%d")
 
 if [[ "$1" == "--date" ]]; then
     echo "Dzisiaj jest: $dzisiaj"
-elif [[ "$1" == "--logs" ]]; then
+elif [[ "$1" == "--logs" || "$1" == "-l" ]]; then
     if [[ $# -ne 2 || ! $2 =~ ^[0-9]+$ ]]; then
         echo "Użycie: $0 --logs <liczba_plików>"
         exit 1
