@@ -21,4 +21,7 @@ elif [[ "$1" == "--logs" ]]; then
     echo "$liczba_plikow plików zostało utworzonych."
 else
     echo "Użycie: $0 [--date | --logs]"
+    echo "Opcje:"
+    echo "  --date       Wyświetla dzisiejszą datę."
+    echo "  --logs <n>   Tworzy n plików dziennika z datą i nazwą skryptu."
 fi
