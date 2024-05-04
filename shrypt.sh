@@ -22,11 +22,11 @@ elif [[ "$1" == "--logs" ]]; then
 elif [[ "$1" == "--help" || "$1" == "-h" ]]; then
     echo "Użycie: $0 [--date | --logs]"
     echo "Opcje:"
-    echo "  --date       Wyświetla dzisiejszą datę."
-    echo "  --logs <n>   Tworzy n plików dziennika z datą i nazwą skryptu."
+    echo "  --date  -d    Wyświetla dzisiejszą datę."
+    echo "  --logs <n>  -l   Tworzy n plików dziennika z datą i nazwą skryptu."
 else
     echo "Użycie: $0 [--date | --logs]"
     echo "Opcje:"
-    echo "  --date       Wyświetla dzisiejszą datę."
-    echo "  --logs <n>   Tworzy n plików dziennika z datą i nazwą skryptu."
+    echo "  --date   -d    Wyświetla dzisiejszą datę."
+    echo "  --logs <n>  -l  Tworzy n plików dziennika z datą i nazwą skryptu."
 fi
